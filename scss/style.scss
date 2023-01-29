@@ -1,0 +1,151 @@
+// adding bootstrap from custom.scss
+@use 'custom';
+
+//Import the components
+@use 'components/animations';
+@use 'components/buttons';
+@use 'components/mixins';
+@use 'components/typography';
+
+//Import sections
+
+/* @use 'sections/hero'; */
+/*********** Tricker code ***********/
+.ticker{
+    position:relative;
+    z-index:1000; 
+    background-color: #044CAC;
+    text-align: center;
+    padding: 5px 0px;
+    i{
+        color: white;
+    }
+    span{
+        line-height: 30px;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: titilliumWeb, sans-serif;
+    }
+   
+}
+
+header{
+    
+    .navbar{
+        background: #0000000c;
+        position:relative;
+        z-index:1000; 
+        .navbar-brand{
+           
+            margin-left: 3rem;
+
+            .logo-img{
+                width: 100px;
+                height: 80px;
+            }
+        }
+        .menu-items{
+            
+            .nav-item{
+              
+                text-align: center;
+                .drop-arrow-custom{
+                   
+                    i{
+                        position: absolute;
+                        bottom: 0;
+                        color: white;
+                        transform: rotate(180deg);
+                        margin-bottom: -6px !important;
+                    } 
+                }
+                .nav-link{
+                    font-size: .9rem;
+                    font-weight: 800;
+                    font-family: titilliumWeb, sans-serif;
+                    color: white;
+                    padding: 10px 20px;
+                    &:hover{
+                        color: rgb(121, 121, 121);
+                    }
+                }
+            }
+        }
+        .extra-siderbar{
+            margin-right: 3rem;
+            i{
+                font-size: 1.5rem;
+                color: white;
+               
+            }
+        }
+    }
+}
+
+.home-slider{
+    margin-top: -15%;
+    position: absolute;
+
+    .carousel-item{
+        img{
+            object-fit: cover;
+           
+        
+        }
+    }
+    .carousel-caption{
+        display: flexbox;
+        text-align: center;
+       
+        width: 100%;
+        h5{ 
+            
+            color: red;
+            
+          font-size: 3rem;
+          font-weight: 100;
+          margin-bottom: 50px;
+         
+        }
+        p{
+            
+            font-family: raleway, sans-serif;
+            font-size: 1rem;
+            width: 90%;
+            padding-top: 50px;
+        }
+
+    }
+        .carousel-control-prev,
+        .carousel-control-next{
+        top: 75%; 
+        width: 80%;
+
+    }
+    .social-menu{
+        position: absolute;
+        z-index:1000; 
+        padding-top: 15%;
+       ul{
+        list-style-type: none;
+        li{
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            min-width: 20px;
+            padding: 20px;
+            
+            a{
+                text-decoration: none;
+                font-size: 12px;
+                color: white;
+                &:hover{
+                    color: rgb(148, 148, 148);
+                }
+            }
+            
+        }
+       } 
+        text-align: center;
+    }
+}
